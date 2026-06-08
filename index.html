@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digit AI</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top,#1e3a8a,#0f172a);
+}
+
+.card{
+    width:420px;
+    padding:30px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    text-align:center;
+    color:white;
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+p{
+    opacity:0.8;
+}
+
+input{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+}
+
+button{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:scale(1.03);
+}
+
+.result{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:#22c55e;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🧠 AI Digit Recognizer</h1>
+<p>Upload handwritten digit image</p>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Predict Digit</button>
+</form>
+
+</div>
+
+</body>
+</html>
